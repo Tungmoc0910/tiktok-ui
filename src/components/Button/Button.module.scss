@@ -17,6 +17,16 @@
       opacity: 0.5;
    }
 }
+.icon + .title,
+.title + .icon {
+   margin-left: 8px;
+}
+.icon {
+   display: inline-block;
+   width: 20px;
+   text-align: center;
+}
+
 .rounded {
    border-radius: 9999px;
 
@@ -58,9 +68,6 @@
    &:hover {
       background-color: rgba(22, 24, 35, 0.03);
    }
-}
-.icon-plus {
-   margin-right: 8px;
 }
 
 //Disabled
