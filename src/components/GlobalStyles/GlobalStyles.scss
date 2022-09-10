@@ -4,12 +4,13 @@
 :root {
    --primary-color: #fe2c55;
    --black-color: #000;
-   --text-color: #333;
+   --text-color: rgb(22, 24, 35);
    --white-color: white;
    //Default Layout
 
    --default-layout-header-height: 60px;
    --default-layout-width: 1150px;
+   --default-layout-horizontal-spacer: 24px;
 }
 * {
    box-sizing: border-box;
