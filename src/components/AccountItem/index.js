@@ -1,25 +1,28 @@
 import classNames from 'classnames/bind';
 import styles from './AccountItem.module.scss';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
    return (
-      <div className={cx('wrapper')}>
-         <img
+      <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+         <Image
             className={cx('avatar')}
-            src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/2f3781bf7266f3b20e88934d707e9824~c5_100x100.jpeg?x-expires=1662649200&x-signature=LZqGAxZ9%2B9pIHecnTLOzBRYRvHM%3D"
-            alt="Hoa"
+            src={data.avatar}
+            alt="warnermusicvn"
+            // backup="https://www.rvpartscanada.com/storage/app/public/general_settings/no-image224-13PK.png"
          />
          <div className={cx('info')}>
             <h4 className={cx('name')}>
-               <span>warnermusicvn</span>
-               <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+               <span>{data.nickname}</span>
+               {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
             </h4>
-            <span className={cx('username')}>Warner Music Vietnam</span>
+            <span className={cx('username')}>{data.full_name}</span>
          </div>
-      </div>
+      </Link>
    );
 }
 
