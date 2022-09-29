@@ -5,6 +5,7 @@
    --black-color: #000;
    --text-color: rgb(22, 24, 35);
    --white-color: white;
+   --font-family: ProximaNova, sans-serif;
    //Default Layout
 
    --default-layout-header-height: 60px;
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-   font-family: 'ProximaNova', sans-serif;
+   font-family: var(--font-family);
    font-size: 1.6rem;
    line-height: 1.5;
    text-rendering: optimizeSpeed;

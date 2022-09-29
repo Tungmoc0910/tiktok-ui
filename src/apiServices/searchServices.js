@@ -6,6 +6,7 @@ export const search = async (q, type = 'less') => {
    } catch (error) {
       console.log(error);
    }
+   
 };
 
 search();

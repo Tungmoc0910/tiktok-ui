@@ -1,10 +1,10 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
-
+import routesConfig from '~/config/routes';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css'; // optional
-
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 
@@ -65,7 +65,9 @@ function Header() {
       <header className={cx('wrapper')}>
          <div className={cx('inner')}>
             <div className={cx('logo')}>
-               <img src={images.logo} alt={'Tiktok'} />
+               <Link to={routesConfig.home} className={cx('logo-link')}>
+                  <img src={images.logo} alt={'Tiktok'} />
+               </Link>
             </div>
             <Search />
             <div className={cx('actions')}>
@@ -98,7 +100,7 @@ function Header() {
                   {currentUser ? (
                      <Image
                         className={cx('user-avatar')}
-                        src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/98d5986d5852e5feec015ee97358f092~c5_720x720.jpeg?x-expires=1662991200&amp;x-signature=ISOkro0cCGO0kOx6oaI8%2FOB8TOg%3D&quot"
+                        src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/98d5986d5852e5feec015ee97358f092~c5_720x720.jpeg?x-expires=1664553600&amp;x-signature=zkQJZqT3UwaPiAzFNOZspZaA46s%3D"
                         alt="Nguyen Van A"
                      />
                   ) : (
